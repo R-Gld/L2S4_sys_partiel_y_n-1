@@ -1,4 +1,4 @@
-# Partiel de L'année N-1
+# Partiel de Système de l'année 2023
 ## Description
 
 Ce repo est une implémentation en C et en dash du partiel de `Système et programmation Système` de l'année 2023. <br/>
