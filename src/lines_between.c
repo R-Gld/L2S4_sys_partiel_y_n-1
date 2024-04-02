@@ -38,10 +38,7 @@ int main(int argc, char **argv) {
     int line_counter = 1;
     while(!feof(output)) {
         fread(&vl, 1, sizeof(char), output);
-        if(ferror(output)) {
-            perror("fread");
-            return EXIT_FAILURE;
-        }
+
         if(N1 <= line_counter && line_counter <= N2) {
             fwrite(&vl, 1, sizeof(char), stdout);
         }
@@ -49,6 +46,9 @@ int main(int argc, char **argv) {
             line_counter++;
         }
     }
+
+    if(arg_FILE != NULL)
+        fclose(output);
 
     return EXIT_SUCCESS;
 }
